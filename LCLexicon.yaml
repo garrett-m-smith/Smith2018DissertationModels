@@ -1,0 +1,82 @@
+# Lexicon for local coherence dissertation simulations
+# Feature dimensions: N, Prep, MainVerb, Participle
+
+EMPTY:
+    phon_form: EMPTY
+    head: [0, 0, 0, 0]
+    gov_req: False
+    dependents: !!null
+    dep_req: !!null
+
+#smiled:
+#    phon_form: smiled
+#    head: [0, 0, 1, 0]
+#    gov_req: False
+#    dependents:
+#        PP: [0, 1, 0, 0]
+#    dep_req: [True]
+
+#smiled:
+#    phon_form: smiled
+#    head: [0, 0, 1, 0]
+#    gov_req: False
+#    dependents:
+#        DO: [1, 0, 0, 0]
+#    dep_req: [True]
+
+at:
+    phon_form: at
+    head: [0, 1, 0, 0]
+    gov_req: False  # This is a choice for this fragmentary sequence
+    dependents: 
+        PObj: [1, 0, 0, 0]
+    dep_req: [True]
+
+#at:
+#    phon_form: at
+#    head: [0, 1, 0, 0]
+#    gov_req: True  # This is a choice for this fragmentary sequence
+#    dependents: !!null
+#    dep_req: !!null
+
+player:
+    phon_form: player
+    head: [1, 0, 0, 0]
+    gov_req: True
+    dependents:
+        RCmod: [0, 0, 0, 1]
+    dep_req: [False]
+
+#player:
+#    phon_form: player
+#    head: [1, 0, 0, 0]
+#    gov_req: False  # Needs to be false here b/c in full sent. it would be gov. by 'smiled'
+#    dependents:
+#        Case: [0, 1, 0, 0]
+#        RCmod: [0, 0, 0, 1]
+#    dep_req: [False, False]
+
+tossed_MV:
+    phon_form: tossed
+    head: [0, 0, 1, 0]
+    gov_req: False
+    dependents: 
+        Subj: [1, 0, 0, 0]
+#        DO: [1, 0, 0, 0]
+    dep_req: [True]
+
+tossed_Part:
+    phon_form: tossed
+    head: [0, 0, 0, 1]
+    gov_req: True
+    dependents: !!null
+#        DO: [1, 0, 0, 0]
+    dep_req: !!null  #[False]
+
+thrown:
+    phon_form: thrown
+    head: [0, 0, 0, 1]
+    gov_req: True
+    dependents:  !!null
+#        DO: [1, 0, 0, 0]
+    dep_req: !!null  #False
